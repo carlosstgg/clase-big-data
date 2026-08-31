@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import requests
 
@@ -91,10 +92,10 @@ def ejecutar_pipeline(df):
     # 3.7 Resultado
     # --------------------------------------------------------
 
-    archivo_salida = (
-        "data/processed/"
-        "auto_resultado.csv"
-    )
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    archivo_salida = os.path.join(os.path.dirname(script_dir), "data", "processed", "auto_resultado.csv")
+
+    os.makedirs(os.path.dirname(archivo_salida), exist_ok=True)
 
     df.to_csv(
         archivo_salida,
