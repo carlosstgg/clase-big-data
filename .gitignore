@@ -2,3 +2,6 @@
 .vscode/
 **/__pycache__/
 **/.ipynb_checkpoints/
+# Dataset examen 2do parcial
+examen_2do_parcial/data/raw/nyc_taxi_examen.csv
+examen_2do_parcial/data/raw/nyc_taxi_examen.csv.zip
